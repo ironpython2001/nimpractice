@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "attach",
+            "name": "Attach",
+             "pid": "${command:pickProcess}", // use ${command:pickProcess} to pick other users' processes
+             "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+            
+        },
+
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "nim: debug current file",
+            "preLaunchTask": "nim: build current file (for debugging)",
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+        }
+       
+    ]
+}

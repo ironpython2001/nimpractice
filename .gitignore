@@ -58,7 +58,7 @@ src/nimblepkg/version
 *.pdb
 
 # Editors and IDEs project files and folders
-.vscode
+#.vscode
 
 # VCS artifacts
 *.orig
